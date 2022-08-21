@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardForm</title>
+    <link rel="stylesheet" href="index.css">    
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="images">
+                <div class="front">
+                    <img src="images/bg-card-front.png" alt="">
+                    <div class="front-content">
+                        <div class="circles">
+                            <span id="one"></span>
+                            <span id="two"></span>
+                        </div>
+                        <div class="card-number">
+                            <p>0000 0000 0000 0000</p>
+                        </div>
+                        <div class="card-user">
+                            <p>Jane Doe</p>
+                            <span>00/00</span>
+                        </div>                    
+                    </div>      
+                </div>
+                <div class="back">
+                    <img src="images/bg-card-back.png" alt="">
+                    <div class="back-content">
+                        <p>000</p>
+                    </div>
+                </div>                
+            </div>
+            <div class="form">
+                <div class="name">
+                    <label for="name">CardHolder Name</label>
+                    <input type="text" placeholder="e.g. Jane Doe">
+                </div>           
+                <div class="number">
+                    <label for="number">Card Number</label>
+                    <input type="text" placeholder="e.g. 1234 5678 9123 0000">
+                </div>
+                <div class="inline">
+                    <div class="date">
+                        <label for="date">Exp. Date (MM/YY)</label>
+                        <div class="date-input">
+                            <input type="text" placeholder="MM">
+                            <input type="text" placeholder="YY">
+                        </div>
+                        
+                    </div>                   
+                    <div class="cvc">
+                        <label for="cvc">CVC</label>
+                        <input type="text" placeholder="e.g. 123">
+                    </div>                    
+                </div>
+                <div class="btn">
+                    <button>Confirm</button>
+                </div>              
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

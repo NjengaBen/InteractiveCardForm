@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.container{
+    position: relative;
+    background-image: url(images/bg-main-desktop.png);
+    height: 100vh;
+}
+
+.content{
+    position: absolute;
+    left: 30%;
+    background-color: hsl(0, 0%, 100%);
+    width: 70%;
+    height: 100%;           
+    display: flex;
+    flex-direction: column;    
+}
+
+/* .images{
+    width
+} */
+
+.images .front{
+    position: absolute;
+    top: 100px;
+    left: -300px;
+}
+
+.images .back{
+    position: absolute;
+    top: 400px;
+    left: -200px;
+}
+
+.images .front-content{
+    color: hsl(0, 0%, 100%);
+    position: relative;
+}
+
+.circles #one{
+    position: absolute;
+    top: -220px;
+    left: 22px;
+    background-color: hsl(0, 0%, 100%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;  
+}
+.circles #two{
+    position: absolute;
+    top: -210px;
+    left: 80px;
+    background-color: transparent;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid hsl(0, 0%, 100%);  
+}
+
+.card-number p{
+    position: absolute;
+    top: -125px;
+    left: 22px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.card-user{
+    position: absolute;
+    bottom: 20px;
+    left: 22px;
+    display: flex;       
+}
+
+.back-content p{
+    position: absolute;
+    bottom: 119px;
+    right: 60px;
+    color: hsl(0, 0%, 100%);
+}
+
+.form{
+    height: 100vh;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name, .number{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.inline{
+    display: flex;
+    padding: 10px 0;   
+}
+
+.inline >.date, .cvc{
+    display: flex;
+    flex-direction: column;
+    /* padding: 5px; */
+}
+
+.date-input{
+    display: flex;
+    /* padding-right: 10px;     */
+}
+
+input{
+    border: 2px solid hsl(270, 3%, 87%);
+    border-radius: 10px;
+    height: 40px;
+    width: 350px;
+    padding-left: 10px;
+    outline: none;
+}
+
+input:focus{
+    outline: 2px solid hsl(278, 68%, 11%);
+}
+
+.date-input input, .cvc input{
+    width: 80px;
+    margin-right: 10px;
+}
+
+.cvc input{
+    width: 170px;
+    margin-right: 0;
+}
+
+.btn{
+    padding: 40px 0;
+}
+
+.btn button{
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);    
+}
+
+.btn button:hover{
+    background-color: hsl(279, 6%, 55%);
+}
