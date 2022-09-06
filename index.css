@@ -156,7 +156,8 @@ input:focus{
     margin-right: 0;
 }
 
-.complete{    
+.complete{ 
+    height: 100vh;   
     display: flex;
     flex-direction: column;
     justify-content: center;

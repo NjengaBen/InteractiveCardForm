@@ -9,9 +9,8 @@ form.addEventListener('submit', e=>{
     e.preventDefault()
 
     validateInputs()
-    updateFields()
-    hideForm()
-    
+    // updateFields()    
+    // hideForm()      
 })
 
 const setError = (element, message) =>{
@@ -32,38 +31,84 @@ const setSucces = element =>{
     inputControl.classList.remove('error')
 }
 
-const validateInputs = ()=> {
+const checkUserName = () =>{
+    let valid = false
     const userNameValue = userName.value.trim()
-    const numberValue = number.value.trim()
-    const monthValue = month.value.trim() 
-    const yearValue = year.value.trim()
-    const cvcValue = cvc.value.trim()
 
-
-    if (userNameValue ===''){
-        setError(userName, 'Username is required!')
-    } else{
+    if(userNameValue ===''){
+        setError(userName, 'Username is required')
+    }else{
         setSucces(userName)
+        valid = true
     }
-    if (numberValue ===''){
-        setError(number, 'Number cannot be empty!')
+    return valid
+
+}
+
+const checkCardNumber = () =>{
+    let valid = false
+    const numberValue = number.value.trim()
+
+    if (numberValue === ''){
+        setError(number, 'Number cannot be empty!')        
     }else{
         setSucces(number)
+        valid = true
     }
-    if (monthValue ===''){
-        setError(month, 'Required!')
+    return valid
+}
+
+const checkMonth = () =>{
+    let valid = false
+    const monthValue = month.value.trim()
+
+    if (monthValue === ''){
+        setError(month, 'Required!')        
     }else{
         setSucces(month)
+        valid = true
     }
-    if (yearValue===''){
-        setError(year, 'Required!')
+    return valid
+}
+
+const checkYear = () =>{
+    let valid = false
+    const yearValue = year.value.trim()
+
+    if (yearValue === ''){
+        setError(year, 'Required!')        
     }else{
         setSucces(year)
-    }   
+        valid = true
+    }
+    return valid
+}
+
+const checkCVC = () =>{
+    let valid = false
+    const cvcValue = cvc.value.trim()
+
     if (cvcValue ===''){
-        setError(cvc, 'CVC is required!')
+        setError(cvc, 'Required!')        
     }else{
         setSucces(cvc)
+        valid = true
+    }
+    return valid
+}
+
+const validateInputs = () => {
+    let validUserName = checkUserName()
+    let validCardNumber = checkCardNumber()
+    let validMonth = checkMonth()
+    let validYear = checkYear()
+    let validCVC = checkCVC()
+
+    let formValid = validUserName && validCardNumber && validMonth && validYear && validCVC
+
+    if(formValid){
+        updateFields()
+        hideForm()
     }
 }
 
@@ -90,12 +135,12 @@ const updateFields = () =>{
 document.getElementsByClassName('form').onload = showForm()
 
 function showForm(){
-    document.querySelector('.complete').style.visibility = 'hidden'
+    document.querySelector('.complete').style.display = 'none'
     
 }
 
 function hideForm(){
-    document.querySelector('.form').style.visibility = 'hidden'
-    document.querySelector('.complete').style.visibility = 'visible'
+    document.querySelector('.form').style.display = 'none'
+    document.querySelector('.complete').style.display = 'inherit'
 }
 
